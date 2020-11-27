@@ -1,0 +1,26 @@
+\section{Introduction}
+
+\begin{frame}{Origin}
+    KHAZAD is a block cipher designed by Paulo S. L. M. Barreto and Vincent Rijmen, one of the designers of the Advanced Encryption Standard (Rijndael). KHAZAD is named after Khazad-dûm, the fictional dwarven realm in the writings of J.R.R. Tolkien. \\
+    \medskip
+    It was presented at the first NESSIE workshop in 2000, and, after some small changes, was selected as a finalist in the project.
+\end{frame}
+    
+\begin{frame}{Introduction}
+    KHAZAD has an eight-round substitution–permutation network structure similar to that of SHARK. The design is classed as a "legacy-level" algorithm, with a 64-bit block size and a 128-bit key. \\
+    \medskip
+    KHAZAD makes heavy use of involution as sub-components which minimises the difference between the algorithms for encryption and decryption.
+    \begin{table}[h]
+    \footnotesize
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    NAME                                     & \textbf{KHAZAD}                         \\ \hline
+    Number of rounds                         & \textbf{8}                              \\ \hline
+    Schedule (extension) of the key          & \textbf{The Feistel scheme}             \\ \hline
+    Unreduced polynomial of the field GF($2^8$) & \textbf{$x^8 + x^4 + x^3 + x^2 + 1$} \\ \hline
+    Implementation of the S-box              & \textbf{Recursive P - and Q-mini-blocks} \\ \hline
+    Implementation of the mixing matrix      & \textbf{Involution MDS code}          \\ \hline
+    \end{tabular}
+    \end{table}
+\end{frame}

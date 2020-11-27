@@ -1,0 +1,51 @@
+\documentclass[hyperref={pdfpagelabels=false}]{beamer}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usetheme{Frankfurt}
+\usecolortheme{crane}
+
+\title{Khazad-Block-Cipher}  
+\author{\texttt{CodeRangers}} 
+\institute{
+	\includegraphics[scale=0.08]{Screenshots/logoiitbh}
+	
+	Department of \texttt{Computer Science}\\ 
+	Indian Institute of Technology Bhilai}
+
+\begin{document}
+	\begin{frame}
+	\titlepage
+
+\end{frame} 
+
+\AtBeginSection[]
+{
+	\begin{frame}<beamer>
+	\frametitle{Outline}
+	\tableofcontents[currentsection]
+\end{frame}
+}
+
+\input{2intro}
+\input{3spec}
+\input{4observe}
+\input{5bpnominate}
+\input{6conclu}
+
+
+\begin{frame}{Thanks}
+\begin{block}{Team Members}
+	\begin{itemize}
+		\item Swapnil Narad
+		\item Devansh Chaudhary
+		\item Aditya Kumar Susawat
+	\end{itemize}
+\end{block}
+\begin{block}{Implementation Info}
+	\begin{itemize}
+		\item Github Link: \url{https://github.com/swapnilnarad2000/Khazad-Block-Cipher.git}
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}
