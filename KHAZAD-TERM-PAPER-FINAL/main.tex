@@ -211,7 +211,7 @@ Anubis and Khazad are made in such a way that
 as far as differential attack and attacks like linear attacks are concerned, it is very unusual
 to be successful for these ciphers on their full versions.
 \subsubsection{Differential attack}
-A differential attack exists for a 3 rounds Khazad cipher but its time complexity is very large as compared to 3 round integral attack which is discussed below. The effect of each round on the message block due to different layers is shown below:\\
+This section will be on a differential attack for a 3 rounds version of Khazad cipher whose time complexity is very large as compared to 3 round integral attack which is discussed below. The effect of each round on the message block due to different layers is shown below:\\
 \begin{center}
     \includegraphics[scale=0.6]{Screenshots/diffat.png} \\
     The attack would follow this strategy:
@@ -244,8 +244,8 @@ There were around 100 s-box transitions like 5 -> 5 ,  4 -> 2E,  7 -> 86  having
 \subsubsection{The Integral attack}
 Also known as the \textbf{The Square Attack}. The integral attack consists of the following properties.
 The attack is set on a
-256 plaintexts, such that the first byte takes all 256 possible values
-while other bytes have constant values.
+256 plaintexts, in such a way that first byte will take values ranging to all possible 256/FF values i.e. have all property
+while other bytes have a single value i.e. a constant values i.e. have constant property.
 \begin{itemize}
     \item \textbf{The All property : }The All property is the byte in which all values come once among the texts in the set. It is denoted by \textit{\textbf{A}}.
     \item \textbf{The Constant property : }The constant property refers to the byte in which all texts in the set have the same value. It is denoted by \textit{\textbf{C}}.
@@ -258,8 +258,8 @@ The integral attack on Khazad cipher is explained in the below figure :\cite{1} 
 \begin{center}
     \includegraphics[scale=0.7]{Screenshots/r12.png}  
 \end{center} 
-So we can say that all bytes in our plaintexts will have balanced property after 2 rounds. Considering the fact that there will be no H-box or linear transformation in the last round, the corresponding subkey bytes can be guessed separately to do a complete 3-rounds attack here.\\
-The complexity of this attack will be nearly $2^{16}$ sbox looks and $2^9$ plaintexts selections. Also we can increase this attack to 4 rounds by guessing the other subkey and this will increase time complexity by $2^{64}$.\\
+So we can say that all bytes in our plaintexts will have balanced property after 2 rounds. Considering the fact that there will be no H-box or linear transformation in the last round, the subkey bytes can be separately guessed so to do a complete khzazad 3-rounds version attack here.\\
+The complexity of this attack will be nearly $2^{16}$ sbox looks and $2^9$ plaintexts selections. Also we can increase this attack to one more round making ot 4 rounds by guessing the other subkey and this will increase time complexity by a large factor of $2^{64}$.\\
 So far we have seen two variants of integral attacks on Khazad in which one is 3 round integral attack where complexity is : \\
 \begin{table}[h]
 \centering
@@ -296,8 +296,8 @@ integral attack-3(improved) & 5      & $2^{91}$ & $2^{64}$ \\ \hline
 \end{table}\\
 With the use of key-scheduling algorithm and algebraic properties of round structure, this attack was made possible for 5 round KHAZAD in a very impressive time and space complexity. 
 \subsubsection{Weak Keys Attack}\cite{2}
-There are various new attacks on Khazad one of which is weak keys attack. The one of better cryptanalytic result on 5-rounds Khazad cipher is the of $2^{64}$ weak keys identified where it can be broken with
-$2^{43}$ steps of analysis using $2^{38}$ encryption blocks.\\
+There are various new attacks on Khazad one of which is weak keys attack. The one more cryptanalytic result on Khazad version of 5-rounds is the of $2^{64}$ weak keys identified where it can be broken with around 
+$2^{43}$ steps of lookups and analysis using $2^{38}$ encryption blocks.\\
 
 \begin{table}[h]
 \centering
